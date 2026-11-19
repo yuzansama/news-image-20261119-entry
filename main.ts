@@ -280,7 +280,7 @@ function summit(x, y, w, h) {
     setClip(x, hy - 30, w, i === 2 ? 14 : 20);
     circle(cx, hy, 27, leaders[i].hair);
     setClip(x, y, w, h);
-    text(leaders[i].name, cx, y + h - 22, 15, WHITE, { align: 0.5, weight: 0.2 });
+    text(leaders[i].name, cx, y + h - 26, 19, WHITE, { align: 0.5, weight: 0.22 });
   }
 }
 
@@ -329,7 +329,7 @@ function ukraine(x, y, w, h) {
   poly([bx + 140, y + 108, bx + 148, y + 86, bx + 160, y + 104, bx + 166, y + 82, bx + 178, y + 124, bx + 160, y + 122], hex('#ffd23f'));
   const smoke = [150, 34, 22, 176, 20, 26, 206, 2, 30, 128, 16, 16];
   for (let i = 0; i < smoke.length; i += 3) circle(bx + smoke[i], y + smoke[i + 1], smoke[i + 2], hex('#2a2830'), 0.85);
-  text('ODESA', bx + 8, y + 12, 18, WHITE, { weight: 0.2 });
+  text('ODESA', bx + 4, y + 10, 22, WHITE, { weight: 0.22 });
   // the Crimea bridge
   const gx = x + 280;
   rect(gx - 10, y + 140, w, 40, hex('#1d3f5e'));
@@ -343,7 +343,7 @@ function ukraine(x, y, w, h) {
   for (const px of [10, 38, 162, 190]) rect(gx + px - 4, y + 118, 8, 30, hex('#e9e6df'));
   star(gx + 150, y + 108, 24, hex('#f26a1b'), 0.3);
   star(gx + 150, y + 108, 12, hex('#ffd23f'), 0.3);
-  text('CRIMEA BRIDGE', gx + 100, y + 30, 18, WHITE, { weight: 0.2, align: 0.5 });
+  text('CRIMEA BRIDGE', gx + 100, y + 26, 22, WHITE, { weight: 0.22, align: 0.5 });
 }
 
 // 4. Strait of Hormuz: Iran says tankers caught fire after hitting sea mines.
@@ -376,7 +376,7 @@ function hormuz(x, y, w, h) {
   circle(mx, my, 17, hex('#111318'));
   circle(mx - 5, my - 6, 4, hex('#59606e'));
   rect(x, sy + 24, w, h, hex('#0b3145'), 0, 0.55);
-  text('SEA MINE', mx, sy + 36, 14, WHITE, { weight: 0.2, align: 0.5 });
+  text('SEA MINE', mx - 6, sy + 35, 18, WHITE, { weight: 0.22, align: 0.5 });
 }
 
 // 5. Games: Grand Theft Auto VI is released after a 13-year wait.
@@ -433,7 +433,7 @@ function mongolia(x, y, w, h) {
   // the way out
   const dx = x + (w * 5) / 6;
   rect(dx - 30, y + 46, 60, h, hex('#2b0d10'));
-  text('EXIT', dx, y + 22, 16, WHITE, { weight: 0.2, align: 0.5 });
+  text('EXIT', dx, y + 16, 22, WHITE, { weight: 0.22, align: 0.5 });
   line(cx + 70, y + 132, dx - 44, y + 132, 6, WHITE);
   poly([dx - 30, y + 132, dx - 50, y + 118, dx - 50, y + 146], WHITE);
 }
@@ -476,8 +476,8 @@ function page() {
     // both lines of a headline share the largest size at which the longer one fits the card
     let size = 24;
     while (Math.max(textWidth(s.lines[0], size), textWidth(s.lines[1], size)) > cw - 24) size -= 0.5;
-    text(s.lines[0], x + 12, y + ph + 30, size, INK, { weight: 0.19 });
-    text(s.lines[1], x + 12, y + ph + 65, size, INK, { weight: 0.19 });
+    text(s.lines[0], x + 12, y + ph + 30, size, INK, { weight: 0.215 });
+    text(s.lines[1], x + 12, y + ph + 65, size, INK, { weight: 0.215 });
   });
 }
 
